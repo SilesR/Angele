@@ -3,7 +3,8 @@ using System.Collections;
 
 public class Disparador : MonoBehaviour {
 
-	private Animator animator;
+	public Animator animator;
+	public Animator animator2;
 
 	// Use this for initialization
 	void Start () {
