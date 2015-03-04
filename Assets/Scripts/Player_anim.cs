@@ -6,7 +6,7 @@ public class Player_anim : MonoBehaviour {
 	public float speed = 2f;
 	public Vector3 maxVelocity = new Vector3(2,3,3);
 	public float velocidad = 2f;
-	public float jumpSpeed = 5f;
+
 
 	Animator anim;
 
