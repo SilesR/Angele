@@ -8,8 +8,14 @@ public class JumpScript : MonoBehaviour {
 	public bool standing;
 	
 	private float initJump;
+
+	Animator anim;
+
 	void Start(){
 		initJump = jumpSpeed;
+			
+		anim = GetComponent<Animator>();
+
 	}
 	
 	// Update is called once per frame
@@ -17,13 +23,17 @@ public class JumpScript : MonoBehaviour {
 		var absVelY = Mathf.Abs(rigidbody.velocity.y);
 		if(absVelY <= .05f){
 			standing = true;
+			anim.SetBool ("salto", false);
+
 		}else{
+
 			standing = false;
+			anim.SetBool ("salto", true);
 		}
 		
-		if( (Input.GetKeyDown("up") || Input.GetKeyDown("space")) && standing){
-			rigidbody.AddForce(new Vector2(0, jumpSpeed), ForceMode.Impulse);
-		}
+		if ((Input.GetKeyDown ("up") || Input.GetKeyDown ("space")) && standing) {
+						rigidbody.AddForce (new Vector2 (0, jumpSpeed), ForceMode.Impulse);
+				} 
 	}
 	
 	//Si salimos del trigger cortamos la carga
