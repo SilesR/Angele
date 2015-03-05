@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class claustrofobia : MonoBehaviour {
-
+	/*
 	Camera camara;
 	public int factor_miedo = 1; // El factor muiedo indicará la velocidad con la que se reduce el campo de visión
 	public int distancia = 1;
@@ -22,4 +22,5 @@ public class claustrofobia : MonoBehaviour {
 			transform.position.z = new Vector3(0,0,transform.position.z - Time.deltaTime*distancia);
 
 	}
+	*/
 }
