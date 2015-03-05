@@ -2,10 +2,11 @@
 using System.Collections;
 
 public class claustrofobia : MonoBehaviour {
-	/*
+
 	Camera camara;
-	public int factor_miedo = 1; // El factor muiedo indicará la velocidad con la que se reduce el campo de visión
+	public int angulacion = 1; // El factor muiedo indicará la velocidad con la que se reduce el campo de visión
 	public int distancia = 1;
+
 	// Use this for initialization
 
 	void Start () {
@@ -14,13 +15,15 @@ public class claustrofobia : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		camara.fieldOfView = camera.fieldOfView - Time.deltaTime*factor_miedo;
+	void OnTriggerStay (Collider target) {
 
+				//if (claustrofobia) {
 
+				camara.fieldOfView = camera.fieldOfView - Time.deltaTime * angulacion;
 
-			transform.position.z = new Vector3(0,0,transform.position.z - Time.deltaTime*distancia);
+		//}
 
-	}
-	*/
+//			transform.position.z = new Vector3(0,0,transform.position.z - Time.deltaTime*distancia);
+		}
 }
+
